@@ -20,7 +20,7 @@ set laststatus=2
 "colorscheme oceanic_material
 "let g:oceanic_material_background='darker'
 
-let g:gruvbox_contrast = "hard"
+"let g:gruvbox_contrast = "hard"
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 "highlight Normal ctermbg=NONE
