@@ -1,10 +1,11 @@
 set number
-set mouse=a                                                                                         
-set numberwidth=1                                                                                   
+set mouse=a                              
+set numberwidth=1                                                          
 set clipboard=unnamed
 syntax on
 set showcmd
 set ruler
+set ttimeoutlen=100
 set encoding=utf-8
 set showmatch
 set sw=2
@@ -15,7 +16,6 @@ so $HOME/.config/nvim/vimConfigs/plugins.vim
 so $HOME/.config/nvim/vimConfigs/plugin-config.vim
 so $HOME/.config/nvim/vimConfigs/maps.vim
 so $HOME/.config/nvim/vimConfigs/coc-config.vim
-set laststatus=2
 
 
 "Themes
