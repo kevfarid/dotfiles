@@ -21,7 +21,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  $TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -29,32 +29,33 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 120
+    lines: 30
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 400
+    y: 300
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 20
+    y: 20
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  #dynamic_padding: true
 
   # Window decorations
   #
   # Values for `decorations`:
+  decorations: none
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
   #
@@ -75,7 +76,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+  title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
@@ -112,7 +113,7 @@ font:
      # - (Linux/BSD) monospace
      # - (Windows) Consolas
 
-    family: MesloLgs NF
+    family: FiraCode NF
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -176,7 +177,7 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
   #primary:
   #background: '#1d1f21'
@@ -214,7 +215,34 @@ font:
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  #search:
+  bright:
+    black: '#2c2b2a'
+    blue: '#5389c5'
+    cyan: '#ebc587'
+    green: '#42824a'
+    magenta: '#e795a5'
+    red: '#b33323'
+    white: '#ffffff'
+    yellow: '#c75a22'
+  cursor:
+    cursor: '#c9c9c9'
+    text: '#141414'
+  normal:
+    black: '#191918'
+    blue: '#206ec5'
+    cyan: '#ac9166'
+    green: '#587744'
+    magenta: '#864651'
+    red: '#b34538'
+    white: '#f1eee7'
+    yellow: '#d08949'
+  primary:
+    background: '#141414'
+    foreground: '#c9c9c9'
+  selection:
+    background: '#141414'
+    text: '#c9c9c9'
+    #search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
     #matches:
@@ -312,6 +340,16 @@ font:
   #
   #indexed_colors: []
 
+  # Bright colors
+  bright:
+    black:   '0x686868'
+    red:     '0xF07178'
+    green:   '0xC2D94C'
+    yellow:  '0xFFB454'
+    blue:    '0x59C2FF'
+    magenta: '0xFFEE99'
+    cyan:    '0x95E6CB'
+    white:   '0xFFFFFF'
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -357,7 +395,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.98
+background_opacity: 0.95
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -723,6 +761,7 @@ key_bindings:
   - { key: V,          mods: Control,                    action: Paste          }
   - { key: C,          mods: Control,                    action: Copy           }
   - { key: C, mods: Control|Shift, chars: "\x03"}
+  - { key: W, mods: Control, action: Quit }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
   #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
@@ -807,7 +846,7 @@ key_bindings:
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
   # (Windows only)
-  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  - { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
   # (macOS only)
   #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }

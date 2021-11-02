@@ -15,6 +15,7 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'glepnir/oceanic-material'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } 
+Plug 'ntk148v/vim-horizon'
 
 " Tree
 Plug 'scrooloose/nerdtree'

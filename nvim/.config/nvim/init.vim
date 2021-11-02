@@ -19,7 +19,8 @@ so $HOME/.config/nvim/vimConfigs/coc-config.vim
 
 
 "Themes
-so $HOME/.config/nvim/vimConfigs/themes/gruvbox.vim
+so $HOME/.config/nvim/vimConfigs/themes/horizon.vim
+"so $HOME/.config/nvim/vimConfigs/themes/gruvbox.vim
 "so $HOME/.config/nvim/vimConfigs/themes/material.vim
 "so $HOME/.config/nvim/vimConfigs/themes/oceanic_material.vim
 
