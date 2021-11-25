@@ -19,16 +19,17 @@ so $HOME/.config/nvim/vimConfigs/coc-config.vim
 
 
 "Themes
-so $HOME/.config/nvim/vimConfigs/themes/horizon.vim
+"so $HOME/.config/nvim/vimConfigs/themes/horizon.vim
 "so $HOME/.config/nvim/vimConfigs/themes/gruvbox.vim
 "so $HOME/.config/nvim/vimConfigs/themes/material.vim
 "so $HOME/.config/nvim/vimConfigs/themes/oceanic_material.vim
+so $HOME/.config/nvim/vimConfigs/themes/tokyonight.vim
 
 "True Colors
 so $HOME/.config/nvim/vimConfigs/themes/trueColors.vim
 
 if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
+  Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
   set signcolumn=yes

@@ -16,6 +16,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'glepnir/oceanic-material'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } 
 Plug 'ntk148v/vim-horizon'
+Plug 'ghifarit53/tokyonight-vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -50,6 +51,7 @@ Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " git
 Plug 'tpope/vim-fugitive'

@@ -1,5 +1,5 @@
 " HTML, JSX
-let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx, *.go'
 " Lightlane
 let g:lightline = {
       \ 'active': {
@@ -15,6 +15,7 @@ let g:lightline = {
       \   'inactive': 'inactive'
       \ },
       \ 'component_function': {
+      \   'filetype': 'MyFiletype',
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
@@ -24,6 +25,14 @@ let g:lightline = {
       \   'right': ''
       \ }
       \}
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 "  nerdtree
 let NERDTreeShowHidden=1
