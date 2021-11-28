@@ -1,0 +1,4 @@
+.netrwhist
+.DS_Store
+node_modules
+lspServers/node_modules/
