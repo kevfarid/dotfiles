@@ -1,12 +1,7 @@
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
-local keys = {
-  leader = '<leader>',
-  enter = '<CR>',
-  esc = '<ESC>',
-  ret = '<return>',
-}
+local keys = {leader = '<leader>', enter = '<CR>', esc = '<ESC>', ret = '<return>'}
 
 -- Keys Globals
 keymap('', '<C-b>', ':NERDTreeToggle' .. keys.enter, opts)
@@ -65,4 +60,3 @@ keymap('o', 'F', '<Plug>Sneak_F', {silent = true})
 -- Git
 -- *****************************************************************************
 keymap('n', '<leader>c', "<ESC>/\v^[<=>]{7}( .*|$)<CR>", opts)
-

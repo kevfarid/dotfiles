@@ -150,3 +150,7 @@ fnm install
 
 # mkdirs
 mkdir ~/workspace
+
+# Git Config
+git config --global user.name "Kev Farid"
+git config --global user.email "kev@kevinfarid.com"

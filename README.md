@@ -1,16 +1,7 @@
 # .dotfiles
 
-Instalar stow
-```bash
-sudo apt-get install -y stow
-```
+Install .dotfiles
 
-Crear Link simbolico
-```bash
-stow 'Nombre de la carpeta'
-```
-
-link simbolico nuevo
-```bash
-stow --adop -v 'Nombre de la carpeta'
-```
+- Add permissed `chmod +x`
+- Run `./install.sh`
+- Go Programming

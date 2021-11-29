@@ -74,8 +74,8 @@ function openNvim {
 
 function openCode {
   if [ $# -eq 0 ]; then
-    nvim ./
+    code ./
   else
-    nvim $1
+    code $1
   fi
 }
