@@ -12,7 +12,7 @@ require('gitsigns').setup()
 
 -- Lualine
 require'lualine'.setup {
-    options = {theme = 'tokyonight'},
+    options = {theme = 'auto'},
     sections = {
         lualine_a = {{'mode', lower = false}},
         lualine_b = {'filename'},
@@ -23,6 +23,7 @@ require'lualine'.setup {
                 symbols = {error = 'E:', warn = 'W:', info = 'I:', hint = 'H:'}
             }
         },
-        lualine_x = {'encoding', 'filetype'}
+        lualine_x = {'encoding', 'filetype'},
+        lualine_y = {'branch'}
     }
 }

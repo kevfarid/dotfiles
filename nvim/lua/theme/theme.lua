@@ -16,6 +16,7 @@ local colorSchemes = {
     quantum = 'quantum',
     tokyoNight = 'tokyonight',
     oneDark = 'onedark',
+    palenight = 'palenight'
 }
 
 vim.cmd(string.format('colorscheme ' .. colorSchemes.tokyoNight))
