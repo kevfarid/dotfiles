@@ -1,8 +1,6 @@
 local lsp_installer = require("nvim-lsp-installer")
 
-local servers = {
-    "bashls", "html", "jsonls", "sumneko_lua", "svelte", "tsserver"
-}
+local servers = {"bashls", "html", "jsonls", "sumneko_lua", "svelte", "tsserver"}
 
 for _, name in pairs(servers) do
     local ok, server = lsp_installer.get_server(name)
@@ -18,8 +16,8 @@ end
 lsp_installer.on_server_ready(function(server)
     local opts = {}
 
-    opts.capabilities = require('cmp_nvim_lsp').update_capabilities(
-                            vim.lsp.protocol.make_client_capabilities())
+    opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol
+                                                                        .make_client_capabilities())
 
     -- (optional) Customize the options passed to the server
     if server.name == "tsserver" then

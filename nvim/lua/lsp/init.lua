@@ -58,13 +58,12 @@ require('formatter').setup({
         svelte = {prettierFormatter},
         typescript = {prettierFormatter},
         typescriptreact = {prettierFormatter}
-  }
+    }
 })
 
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd FileType cpp autocmd BufWritePost <buffer> FormatWrite
   autocmd FileType html autocmd BufWritePost <buffer> FormatWrite
   autocmd FileType css autocmd BufWritePost <buffer> FormatWrite
   autocmd FileType json autocmd BufWritePost <buffer> FormatWrite
@@ -74,6 +73,5 @@ augroup FormatAutogroup
   autocmd FileType svelte autocmd BufWritePost <buffer> FormatWrite
   autocmd FileType lua autocmd BufWritePost <buffer> FormatWrite
   autocmd FileType markdown autocmd BufWritePost <buffer> FormatWrite
-  autocmd FileType rust autocmd BufWritePost <buffer> FormatWrite
 augroup END
 ]], true)
