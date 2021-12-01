@@ -7,11 +7,18 @@ vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.materialmonokai_italic = 1
 vim.g.dracula_italic = 1
+vim.g.material_terminal_italics = 1
+
+-- Tokyo Night Config
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_italic_variables = true
+vim.g.tokyonight_dark_sidebar = true
+vim.g.tokyonight_style = "strom"
+
+vim.g.material_theme_style = 'ocean-community'
 
 vim.cmd('let ayucolor="mirage"')
 vim.cmd('set background=dark')
 vim.cmd('set t_ut=')
-
-vim.g.tokyonight_style = "night"
 
 vim.cmd('highlight clear SignColumn')

@@ -4,7 +4,7 @@ local opts = {noremap = true, silent = true}
 local keys = {leader = '<leader>', enter = '<CR>', esc = '<ESC>', ret = '<return>'}
 
 -- Keys Globals
-keymap('', '<C-b>', ':NERDTreeToggle' .. keys.enter, opts)
+keymap('', '<C-b>', ':NvimTreeToggle' .. keys.enter, opts)
 keymap('i', 'jj', keys.esc, opts)
 keymap('n', keys.leader .. 'V', ':vsplit' .. keys.enter, opts)
 keymap('n', keys.esc, ':noh' .. keys.ret .. keys.esc, opts)

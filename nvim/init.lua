@@ -11,7 +11,7 @@ require('keymaps')
 
 -- init packages config
 
-require('plugins.nerdtree')
+require('plugins.tree')
 require('plugins.treesitter')
 require('plugins.smallConfigs')
 require('plugins.codi')

@@ -21,10 +21,17 @@ return require"packer".startup(function(use)
     use 'arcticicestudio/nord-vim'
     use 'phanviet/vim-monokai-pro'
     use 'drewtempelmeyer/palenight.vim'
+    use {'kaicataldo/material.vim', branch = 'main'}
 
     -- Menu
-    use {'scrooloose/nerdtree'}
-    use {'Xuyuanp/nerdtree-git-plugin'}
+    -- use {'scrooloose/nerdtree'}
+    -- use {'Xuyuanp/nerdtree-git-plugin'}
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+            'kyazdani42/nvim-web-devicons' -- optional, for file icon
+        }
+    }
 
     -- start screen
     use {'mhinz/vim-startify'}
@@ -47,7 +54,6 @@ return require"packer".startup(function(use)
     use {"tpope/vim-repeat"}
     use {"Konfekt/FastFold"}
     use {"metakirby5/codi.vim"}
-    use {"ryanoasis/vim-devicons"}
 
     -- Language Support
     use {"nvim-treesitter/nvim-treesitter"}
