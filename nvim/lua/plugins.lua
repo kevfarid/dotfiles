@@ -54,6 +54,7 @@ return require"packer".startup(function(use)
     use {"tpope/vim-repeat"}
     use {"Konfekt/FastFold"}
     use {"metakirby5/codi.vim"}
+    use {"norcalli/nvim-colorizer.lua"}
 
     -- Language Support
     use {"nvim-treesitter/nvim-treesitter"}

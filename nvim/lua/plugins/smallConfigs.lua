@@ -9,6 +9,7 @@ vim.g.move_key_modifier = 'C'
 
 -- Git Signs
 require('gitsigns').setup()
+require'colorizer'.setup()
 
 -- Lualine
 require'lualine'.setup {
