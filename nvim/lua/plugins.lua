@@ -21,6 +21,7 @@ return require"packer".startup(function(use)
     use 'arcticicestudio/nord-vim'
     use 'phanviet/vim-monokai-pro'
     use 'drewtempelmeyer/palenight.vim'
+    use 'rose-pine/neovim'
     use {'kaicataldo/material.vim', branch = 'main'}
 
     -- Menu

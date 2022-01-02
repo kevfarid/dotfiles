@@ -13,10 +13,6 @@ ZSH_THEME="spaceship"
 # Brew
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# fnm
-# export PATH=/Users/charlie/.fnm:$PATH
-eval "`fnm env`"
-
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -58,7 +54,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Pyenv
 if [[ $OSTYPE = (linux)* ]]; then
-  export PATH="/home/kev/.pyenv/bin:$PATH"
+  export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
@@ -79,3 +75,12 @@ function openCode {
     code $1
   fi
 }
+
+# fnm
+export PATH=/home/kevin/.fnm:$PATH
+eval "`fnm env`"
+
+
+# fnm
+export PATH=/home/kevin/.fnm:$PATH
+eval "`fnm env`"

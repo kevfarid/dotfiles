@@ -28,4 +28,3 @@ require('plugins.cmp')
 require('plugins.lspConfig')
 
 -- end packages config
-
