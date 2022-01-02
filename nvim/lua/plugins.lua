@@ -25,8 +25,6 @@ return require"packer".startup(function(use)
     use {'kaicataldo/material.vim', branch = 'main'}
 
     -- Menu
-    -- use {'scrooloose/nerdtree'}
-    -- use {'Xuyuanp/nerdtree-git-plugin'}
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
@@ -43,6 +41,9 @@ return require"packer".startup(function(use)
 
     -- Visual Tab
     use {'nvim-lualine/lualine.nvim'}
+
+    -- Helpers for UNIX
+    use {'tpope/vim-eunuch'}
 
     -- Efficient moving
     use {'justinmk/vim-sneak'}
@@ -62,17 +63,10 @@ return require"packer".startup(function(use)
     use {"nvim-treesitter/playground"}
     use {"p00f/nvim-ts-rainbow"}
     use {'windwp/nvim-ts-autotag'}
-    use 'bfrg/vim-cpp-modern'
 
-    -- LSP
-    use "hrsh7th/nvim-cmp" -- Autocompletion plugin
-    use "hrsh7th/cmp-nvim-lsp"
-    use "hrsh7th/cmp-vsnip"
-    use "hrsh7th/vim-vsnip"
-    use "mhartington/formatter.nvim"
-    use "neovim/nvim-lspconfig"
-    use "glepnir/lspsaga.nvim"
-    use "williamboman/nvim-lsp-installer"
+    -- COC
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use {'sheerun/vim-polyglot'}
 
     -- Quoting/parenthesizing
     use {"machakann/vim-sandwich"}
@@ -95,4 +89,5 @@ return require"packer".startup(function(use)
 
     -- Highlight White Space
     use {'ntpeters/vim-better-whitespace'}
+
 end)

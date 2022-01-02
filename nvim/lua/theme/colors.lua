@@ -17,6 +17,8 @@ vim.g.tokyonight_style = "strom"
 
 vim.g.material_theme_style = 'ocean-community'
 
+vim.g.rose_pine_variant = 'moon'
+
 vim.cmd('let ayucolor="mirage"')
 vim.cmd('set background=dark')
 vim.cmd('set t_ut=')

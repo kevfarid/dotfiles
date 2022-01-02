@@ -1,3 +1,5 @@
+require('theme.colors')
+
 local colorSchemes = {
     ayu = 'ayu',
     cobalt = 'cobalt2',

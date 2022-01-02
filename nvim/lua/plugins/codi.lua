@@ -36,7 +36,7 @@ vim.cmd([[
   endfunc
 ]])
 
-vim.cmd("let content = ['Typescript', 'Python', 'Lua']")
+vim.cmd("let content = ['JavaScript', 'Typescript', 'Python', 'Lua']")
 vim.cmd(
     "let opts = {'title': 'Playground', 'w': 30, 'callback': 'SelectScratchpad', 'index':g:quickui#listbox#cursor }")
 -- vim.cmd("call quickui#listbox#open(content, opts)")
