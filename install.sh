@@ -10,7 +10,7 @@ if [[ `uname` == "Linux"   ]]; then
   echo "Changing shell to zsh"
   sudo chsh -s $(which zsh)
   # Adding homebrew to zprofile
-  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/kev/.zprofile
+  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> #HOME/.zprofile
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   echo "Installing PyEnv"
   curl https://pyenv.run | bash
@@ -46,7 +46,7 @@ rm -rf ~/.vim ~/.vimrc ~/.zshrc ~/.tmux ~/.tmux.conf ~/.config/nvim ~/.config/ki
 
 echo "Creating symlinks"
 # Neovim expects some folders already exist
-mkdir -p ~/.config ~/.config/nvim ~/.config/nvim/lua ~/.config/kitty
+mkdir -p ~/.config ~/.config/nvim  ~/.config/kitty
 
 echo "Installing Python 3"
 # install python 3
@@ -56,7 +56,7 @@ pyenv global 3.9.5
 # Symlinking files
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+ln -sF ~/.dotfiles/kitty ~/.config/
 ln -s ~/.dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sF ~/.dotfiles/nvim/lua/ ~/.config/nvim/
 
@@ -152,5 +152,5 @@ fnm install
 mkdir ~/workspace
 
 # Git Config
-git config --global user.name "Kev Farid"
-git config --global user.email "kev@kevinfarid.com"
+git config --global user.name "Kevin Cruz"
+git config --global user.email "dev@kevinfarid.com"

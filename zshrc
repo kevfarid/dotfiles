@@ -36,6 +36,7 @@ alias pip=pip3
 alias ws="cd $HOME/workspace"
 alias c=openCode
 alias v=openNvim
+alias vim=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -77,10 +78,5 @@ function openCode {
 }
 
 # fnm
-export PATH=/home/kevin/.fnm:$PATH
-eval "`fnm env`"
-
-
-# fnm
-export PATH=/home/kevin/.fnm:$PATH
+export PATH=$HOME/.fnm:$PATH
 eval "`fnm env`"
