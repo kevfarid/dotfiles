@@ -10,4 +10,5 @@ vim.g.coc_global_extensions = {
     'coc-eslint',
     'coc-jedi',
     'coc-python',
+    'coc-angular',
 }
