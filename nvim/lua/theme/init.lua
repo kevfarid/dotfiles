@@ -23,4 +23,4 @@ local colorSchemes = {
     rosepine = 'rose-pine'
 }
 
-vim.cmd(string.format('colorscheme ' .. colorSchemes.rosepine))
+vim.cmd(string.format('colorscheme ' .. colorSchemes.tokyoNight))

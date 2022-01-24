@@ -12,10 +12,10 @@ require'nvim-tree'.setup {
         enable = false,
         icons = {hint = "", info = "", warning = "", error = ""}
     },
-    update_focused_file = {enable = true, update_cwd = false, ignore_list = {}},
+    update_focused_file = {enable = true, update_cwd = false, ignore_list = {"node_modules", ".git"}},
     system_open = {cmd = nil, args = {}},
     filters = {dotfiles = false, custom = {}},
-    git = {enable = true, ignore = true, timeout = 500},
+    git = {enable = true, ignore = false, timeout = 500},
     view = {
         width = 30,
         height = 30,
