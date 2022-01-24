@@ -37,6 +37,7 @@ alias ws="cd $HOME/workspace"
 alias c=openCode
 alias v=openNvim
 alias vim=nvim
+alias update=updateSystem
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -75,6 +76,11 @@ function openCode {
   else
     code $1
   fi
+}
+
+# update system
+function updateSystem {
+ sudo apt update && sudo apt upgrade
 }
 
 # fnm
