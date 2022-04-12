@@ -153,4 +153,4 @@ mkdir ~/workspace
 
 # Git Config
 git config --global user.name "Kevin Cruz"
-git config --global user.email "dev@kevinfarid.com"
+git config --global user.email "hi@kevfarid.dev"
