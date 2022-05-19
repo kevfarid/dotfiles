@@ -58,14 +58,20 @@ alias me="cd ${workspacePath}/me"
 
 alias reload-bluetooth="pactl load-module module-bluetooth-discover"
 
+alias mysql="mysql -u root -p"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+# GOLANG
 export PATH=$PATH:/usr/local/go/bin
 
 #JAVA
 export JAVA_HOME=/usr/java/jre1.8.0_321/
 export PATH=${PATH}:/usr/java/jre1.8.0_321/bin
+
+# PHP
+export PATH=$PATH:/usr/local/bin/composer
+export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
 
 # Lang
 export LC_ALL=en_US.UTF-8
@@ -102,7 +108,7 @@ function openCode {
 
 # update system
 function updateSystem {
- sudo apt update && sudo apt upgrade
+  sudo apt update && sudo apt upgrade
 }
 
 # fnm
