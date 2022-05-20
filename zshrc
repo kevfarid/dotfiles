@@ -32,8 +32,9 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-syntax-highlighting
+  #zsh-syntax-highlighting
   zsh-autosuggestions
+  F-Sy-H
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0'
