@@ -57,6 +57,8 @@ alias update=updateSystem
 alias work="cd ${workspacePath}/bits"
 alias me="cd ${workspacePath}/me"
 
+alias t=tmux
+
 alias reload-bluetooth="pactl load-module module-bluetooth-discover"
 
 alias mysql="mysql -u root -p"
