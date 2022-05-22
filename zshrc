@@ -78,6 +78,10 @@ export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Rust
+
+export PATH=$PATH:~/.cargo/bin
+
 # GitHub Credentials
 GITHUB_USERNAME=kevfarid
 
