@@ -207,8 +207,8 @@ alt-shift-semicolon = 'mode service'
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = [
-  'layout floating tiling',
-  'mode main',
+    'layout floating tiling',
+    'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
@@ -266,7 +266,7 @@ if.app-id = "com.microsoft.VSCode"
 run = ["move-node-to-workspace dev"]
 
 [[on-window-detected]]
-if.window-title-regex-substring = "Zed"
+if.app-id = "dev.zed.Zed"
 run = ["move-node-to-workspace dev"]
 
 

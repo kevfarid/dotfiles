@@ -44,14 +44,28 @@ alias gc="git commit"
 alias gca="git commit --amend"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-alias gpl="git pull"
+alias gl="git pull"
 alias gco="git checkout"
 alias gcb="git checkout -b"
-alias gl="git log --oneline --graph --decorate --all"
+alias glog="git log --oneline --graph --decorate --all"
 alias gb="git branch"
-alias gpsup="git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
 
-alias gdel="git branch | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | grep -v \"main\" | grep -v \"master\" | xargs git branch -D"
+gpsup() {
+  local branch
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || {
+    echo "❌ No current branch found."
+    return 1
+  }
+
+  git push --set-upstream origin "$branch"
+}
+
+gdel() {
+  local current_branch
+  current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
+
+  git branch | grep -v "$current_branch" | grep -v "main" | grep -v "master" | xargs git branch -D
+}
 
 
 take() {
