@@ -1,5 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
 # fnm
 FNM_PATH="/Users/kev/Library/Application Support/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -12,7 +14,7 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(starship init zsh)"
 
 p(){
-    declare pm="pnpm"
+    declare pm="npm"
     declare dir="."
 
     for i in {1..3}; do
@@ -74,3 +76,18 @@ take() {
 
     mkdir -p "$1" && cd "$1"
 }
+
+# Added by Windsurf
+export PATH="/Users/kev/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/kev/.codeium/windsurf/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/kev/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/kev/.opencode/bin:$PATH
+
+alias claude-mem='bun "/Users/kev/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'

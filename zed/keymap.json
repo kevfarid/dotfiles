@@ -7,6 +7,11 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "ctrl-shift-i": "editor::Format"
+    }
+  },
+  {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
       "tab": "pane::ActivateNextItem",

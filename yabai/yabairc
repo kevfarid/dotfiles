@@ -1,0 +1,115 @@
+#!/usr/bin/env sh
+
+# Yabai configuration migrated from AeroSpace
+
+# global settings - visual enhancements
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          off
+yabai -m config window_origin_display        default
+yabai -m config window_placement             second_child
+yabai -m config window_shadow                on
+yabai -m config window_opacity               on
+yabai -m config window_opacity_duration      0.2
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        0.95
+yabai -m config window_animation_duration    0.0
+yabai -m config window_animation_easing      ease_out_circ
+yabai -m config insert_feedback_color        0xff61afef
+yabai -m config split_ratio                  0.50
+yabai -m config auto_balance                 off
+yabai -m config mouse_modifier               fn
+yabai -m config mouse_action1                move
+yabai -m config mouse_action2                resize
+yabai -m config mouse_drop_action            swap
+
+# SketchyBar integration
+yabai -m config external_bar                 all:45:0
+
+# SketchyBar signals removed - sketchybar uses native space_change event
+
+# general space settings - beautiful spacing
+yabai -m config layout                       bsp
+yabai -m config top_padding                  10
+yabai -m config bottom_padding               6
+yabai -m config left_padding                 6
+yabai -m config right_padding                6
+yabai -m config window_gap                   6
+
+
+# Space labels (matching AeroSpace workspaces)
+# Requires 8 spaces created in System Settings → Desktop & Dock → Mission Control
+yabai -m space 1 --label terminal 2>/dev/null || true
+yabai -m space 2 --label dev 2>/dev/null || true
+yabai -m space 3 --label web 2>/dev/null || true
+yabai -m space 4 --label media 2>/dev/null || true
+yabai -m space 5 --label others 2>/dev/null || true
+yabai -m space 6 --label design 2>/dev/null || true
+yabai -m space 7 --label work 2>/dev/null || true
+yabai -m space 8 --label chat 2>/dev/null || true
+
+# Monitor assignments (secondary display preferred, fallback to main)
+yabai -m space terminal --display 2 2>/dev/null || true
+yabai -m space work     --display 2 2>/dev/null || true
+yabai -m space chat     --display 2 2>/dev/null || true
+yabai -m space design   --display 2 2>/dev/null || true
+yabai -m space media    --display 2 2>/dev/null || true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# WINDOW RULES
+# ─────────────────────────────────────────────────────────────────────────────────
+
+# Launchers / overlays
+yabai -m rule --add app="^Raycast$"    manage=off
+yabai -m rule --add app="^1Password$"  manage=off
+
+# Floating apps
+yabai -m rule --add app="^Finder$"   manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+yabai -m rule --add app="^Notes$"    manage=off
+yabai -m rule --add app="^TextEdit$" manage=off
+yabai -m rule --add app="^Preview$"  manage=off
+yabai -m rule --add app="^Find My$"  manage=off
+yabai -m rule --add title="WhatsApp"   manage=off
+yabai -m rule --add title="Riot Client" manage=off
+yabai -m rule --add title="DevTools"   manage=off
+
+# Terminal workspace (space 1)
+yabai -m rule --add app="^Terminal$" space=terminal
+yabai -m rule --add app="^Warp$"     space=terminal
+yabai -m rule --add app="^Ghostty$"  manage=off space=terminal
+
+# Dev workspace (space 2)
+yabai -m rule --add app="^Code$"      space=dev
+yabai -m rule --add app="^Zed$"       space=dev
+yabai -m rule --add app="^Windsurf$"  space=dev
+
+# Web workspace (space 3)
+yabai -m rule --add app="^Google Chrome$" space=web
+yabai -m rule --add app="^Safari$"        space=web
+yabai -m rule --add app="^Zen$"           space=web
+
+# Media workspace (space 4)
+yabai -m rule --add app="^Music$"   space=media
+yabai -m rule --add app="^Spotify$" space=media
+
+# Others workspace (space 5)
+yabai -m rule --add app="^Mail$" space=others
+
+# Design workspace (space 6)
+yabai -m rule --add title="Figma" space=design
+
+# Work workspace (space 7)
+yabai -m rule --add app="^Microsoft Teams$" space=work
+
+# Chat workspace (space 8)
+yabai -m rule --add app="^Slack$"   space=chat
+yabai -m rule --add app="^Discord$" space=chat
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# SIGNALS - Auto-fix problematic windows
+# ─────────────────────────────────────────────────────────────────────────────────
+
+# Focus next window when one is closed
+yabai -m signal --add event=window_destroyed action="yabai -m window --focus recent || yabai -m window --focus first" label="focus_on_destroy"
+
+echo "yabai configuration loaded.."

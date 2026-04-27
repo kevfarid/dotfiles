@@ -7,25 +7,85 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "features": {
-    "edit_prediction_provider": "copilot"
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "disable_ai": false,
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "file_types": {
+    "HTML": ["hbs"],
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "prettier": {
+    "allowed": true,
+    "plugins": [],
+  },
+  "edit_predictions": {
+    "provider": "zed",
   },
   "agent": {
-    "model_parameters": [],
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "o3-mini"
+    "dock": "right",
+    "profiles": {
+      "agent": {
+        "name": "Agent",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
     },
-    "version": "2"
+    "model_parameters": [],
   },
-  "icon_theme": "Symbols",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Macchiato",
+    "dark": "Symbols Icon Theme",
+  },
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "buffer_font_family": "Dank Mono",
+  "buffer_font_size": 15.0,
+  "buffer_font_family": "Iosevka",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
-  }
+    "dark": "Catppuccin Macchiato (Blur)",
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 12,
+  },
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
 }

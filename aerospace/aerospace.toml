@@ -13,7 +13,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -190,6 +190,10 @@ alt-shift-9 = 'move-node-to-workspace chat'
 # alt-shift-y = 'move-node-to-workspace Y'
 # alt-shift-z = 'move-node-to-workspace Z'
 
+
+# Window toggle in tiling layout and floating layout
+alt-shift-space = 'layout floating tiling'
+
 #full screen
 alt-shift-f = "fullscreen"
 
@@ -255,6 +259,10 @@ if.window-title-regex-substring = "WhatsApp"
 run = ["layout floating"]
 
 [[on-window-detected]]
+if.window-title-regex-substring = "Riot Client"
+run = ["layout floating"]
+
+[[on-window-detected]]
 if.window-title-regex-substring = "DevTools"
 run = ["layout floating"]
 
@@ -269,6 +277,9 @@ run = ["move-node-to-workspace dev"]
 if.app-id = "dev.zed.Zed"
 run = ["move-node-to-workspace dev"]
 
+[[on-window-detected]]
+if.app-id = "com.windsurf.windsurf"
+run = ["move-node-to-workspace dev"]
 
 # Web workspace apps
 # =============================================
@@ -339,7 +350,7 @@ run = ["layout floating", "move-node-to-workspace terminal"]
 # =============================================
 [[on-window-detected]]
 if.window-title-regex-substring = "Figma"
-run = ["move-node-to-workspace Figma"]
+run = ["move-node-to-workspace design"]
 
 
 # MULTIPLE MONITORS
