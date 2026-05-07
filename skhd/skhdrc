@@ -1,0 +1,77 @@
+# skhd configuration migrated from AeroSpace
+
+# Focus windows (alt + ctrl + hjkl) - stay in current space
+alt + ctrl - h : yabai -m window --focus west
+alt + ctrl - j : yabai -m window --focus south
+alt + ctrl - k : yabai -m window --focus north
+alt + ctrl - l : yabai -m window --focus east
+
+# Escape from floating window to last tiled window (alt + ctrl + space)
+alt + ctrl - space : yabai -m window --focus recent
+
+# Move windows (alt + shift + hjkl)
+alt + shift - h : yabai -m window --swap west
+alt + shift - j : yabai -m window --swap south
+alt + shift - k : yabai -m window --swap north
+alt + shift - l : yabai -m window --swap east
+
+# Resize windows (alt + -/=)
+alt - 0x1B : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+alt - 0x18 : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+
+# Resize with arrow keys (more intuitive - alt + arrow keys)
+alt - left : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+alt - right : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+alt - up : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+alt - down : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+
+# Rotate layout 90/270 degrees (alt + r)
+alt - r : yabai -m space --rotate 90
+
+# Flip layout horizontally/vertically (alt + x/y)
+alt - x : yabai -m space --mirror x-axis
+alt - y : yabai -m space --mirror y-axis
+
+# Toggle split type for focused window (alt + e)
+alt - e : yabai -m window --toggle split
+
+# Switch to workspace (alt + number) - native yabai space switching (requires SIP partially disabled)
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+
+# Move window to workspace and follow (alt + shift + number) - native command
+alt + shift - 1 : yabai -m window --space 1 --focus
+alt + shift - 2 : yabai -m window --space 2 --focus
+alt + shift - 3 : yabai -m window --space 3 --focus
+alt + shift - 4 : yabai -m window --space 4 --focus
+alt + shift - 5 : yabai -m window --space 5 --focus
+alt + shift - 6 : yabai -m window --space 6 --focus
+alt + shift - 7 : yabai -m window --space 7 --focus
+
+# Fullscreen (alt + shift + f)
+alt + shift - f : yabai -m window --toggle zoom-fullscreen
+
+# Layout switching
+alt - 0x2C : yabai -m space --layout bsp
+alt - 0x2B : yabai -m space --layout stack
+
+# Workspace back and forth (alt + tab)
+alt - tab : yabai -m space --focus recent
+
+# Move workspace to monitor (alt + shift + tab)
+alt + shift - tab : yabai -m window --display next; yabai -m display --focus next
+
+# Special commands
+# Reload config (alt + shift + r)
+alt + shift - r : yabai --restart-service; skhd --restart-service
+
+# Balance layout (alt + shift + b)
+alt + shift - b : yabai -m space --balance
+
+# Toggle floating (alt + ctrl + f)
+alt + ctrl - f : yabai -m window --toggle float

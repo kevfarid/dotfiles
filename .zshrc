@@ -51,6 +51,7 @@ alias gco="git checkout"
 alias gcb="git checkout -b"
 alias glog="git log --oneline --graph --decorate --all"
 alias gb="git branch"
+alias config-stop="~/.dotfiles/scripts/stop.sh"
 
 gpsup() {
   local branch
