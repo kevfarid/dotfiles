@@ -22,7 +22,7 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -353,7 +353,7 @@ run = ["move-node-to-workspace terminal"]
 
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = ["layout floating", "move-node-to-workspace terminal"]
+run = ["move-node-to-workspace terminal"]
 
 # Design workspace apps
 # =============================================

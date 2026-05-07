@@ -22,6 +22,7 @@ config_dirs=(
   sketchybar
   yabai
   zed
+  ghostty
 )
 
 standalone=(
