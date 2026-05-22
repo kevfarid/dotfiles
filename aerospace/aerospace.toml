@@ -17,8 +17,10 @@ after-login-command = []
 after-startup-command = ['exec-and-forget sketchybar']
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
 # Start AeroSpace at login
@@ -271,6 +273,11 @@ run = ["layout floating"]
 if.window-title-regex-substring = "Riot Client"
 run = ["layout floating"]
 
+# NW.js apps
+[[on-window-detected]]
+if.app-id = "org.nwjs.nwjs"
+run = ["layout floating"]
+
 [[on-window-detected]]
 if.window-title-regex-substring = "DevTools"
 run = ["layout floating"]
@@ -365,7 +372,7 @@ run = ["move-node-to-workspace design"]
 # MULTIPLE MONITORS
 # =============================================
 [workspace-to-monitor-force-assignment]
-terminal = ['secondary', 'main']
+terminal = ['main', 'secondary']
 work = ['secondary', 'main']
 chat = ['secondary', 'main']
 design = ['secondary', 'main']

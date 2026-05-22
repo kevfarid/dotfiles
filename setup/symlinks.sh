@@ -23,6 +23,9 @@ config_dirs=(
   yabai
   zed
   ghostty
+  nvim
+  fish
+  tmux
 )
 
 standalone=(
