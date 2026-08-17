@@ -19,6 +19,9 @@
   },
   "disable_ai": false,
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry",
     },
@@ -74,7 +77,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato (Blur)",
+    "dark": "Tokyo Night",
   },
   "diagnostics": {
     "inline": {

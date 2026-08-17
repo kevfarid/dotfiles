@@ -65,6 +65,14 @@ keybind = ctrl+shift+l=resize_split:right,10
 keybind = cmd+k=clear_screen
 keybind = shift+enter=text:\x1b\r
 
+# Tmux window workflow (disable Ghostty tabs and forward to tmux prefix binds)
+keybind = cmd+t=unbind
+keybind = ctrl+tab=unbind
+keybind = ctrl+shift+tab=unbind
+keybind = cmd+t=text:\x02c
+keybind = ctrl+tab=text:\x02n
+keybind = ctrl+shift+tab=text:\x02p
+
 # Open file with nvim (write 'nvim' first, then use this keybinding)
 keybind = alt+s=write_screen_file:paste
 
@@ -99,4 +107,3 @@ palette = 12=#a3d4d5
 palette = 13=#ffaeea
 palette = 14=#7fb4ca
 palette = 15=#f3f6f9
-

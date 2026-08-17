@@ -3,3 +3,4 @@
 node_modules
 lspServers/node_modules/
 vscode
+zed/prompts/
