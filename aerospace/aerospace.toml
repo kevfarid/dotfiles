@@ -11,10 +11,10 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 #
-# Run Sketchybar together with AeroSpace
+# Run Sketchybar and JankyBorders together with AeroSpace
 # sketchybar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget borders']
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = [
@@ -69,12 +69,13 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 5
-inner.vertical = 5
-outer.left = 5
-outer.bottom = 5
-outer.top = [{ monitor."Mi Monitor" = 50 }, { monitor."Sceptre F22" = 50 }, 8]
-outer.right = 5
+inner.horizontal = 16
+inner.vertical = 16
+outer.left = 16
+outer.bottom = 8
+# Built-in: macOS reserves 32pt for the notch, so 18 lands 10pt below the bar (bottom edge at 40pt)
+outer.top = [{ monitor."Built-in" = 18 }, { monitor."Mi Monitor" = 50 }, { monitor."Sceptre F22" = 50 }, 44]
+outer.right = 16
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -130,18 +131,16 @@ alt-minus = 'resize smart -50'
 alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-0 = 'workspace terminal'
-alt-1 = 'workspace dev'
-alt-2 = 'workspace web'
-alt-3 = 'workspace media'
-alt-4 = 'workspace others'
-# alt-5 = 'workspace 5'
-# alt-6 = 'workspace 6'
-alt-7 = 'workspace design'
-alt-8 = 'workspace work'
-alt-9 = 'workspace chat'
-# alt-8 = 'workspace 8'
-# alt-9 = 'workspace 9'
+alt-0 = 'workspace 0'
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
 # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 # alt-b = 'workspace B'
 # alt-c = 'workspace C'
@@ -166,18 +165,16 @@ alt-9 = 'workspace chat'
 # alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-0 = 'move-node-to-workspace terminal'
-alt-shift-1 = 'move-node-to-workspace dev'
-alt-shift-2 = 'move-node-to-workspace web'
-alt-shift-3 = 'move-node-to-workspace media'
-alt-shift-4 = 'move-node-to-workspace others'
-# alt-shift-5 = 'move-node-to-workspace 6'
-# alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace design'
-alt-shift-8 = 'move-node-to-workspace work'
-alt-shift-9 = 'move-node-to-workspace chat'
-# alt-shift-8 = 'move-node-to-workspace 8'
-# alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 0'
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
 # alt-shift-a = 'move-node-to-workspace A'
 # alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-c = 'move-node-to-workspace C'
@@ -283,97 +280,89 @@ if.window-title-regex-substring = "DevTools"
 run = ["layout floating"]
 
 
-# Dev workspace apps
+# Workspace 1 apps (dev)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
-run = ["move-node-to-workspace dev"]
+run = ["move-node-to-workspace 1"]
 
 [[on-window-detected]]
 if.app-id = "dev.zed.Zed"
-run = ["move-node-to-workspace dev"]
+run = ["move-node-to-workspace 1"]
 
 [[on-window-detected]]
 if.app-id = "com.windsurf.windsurf"
-run = ["move-node-to-workspace dev"]
+run = ["move-node-to-workspace 1"]
 
-# Web workspace apps
+# Workspace 2 apps (web)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.google.Chrome"
-run = ["move-node-to-workspace web"]
+run = ["move-node-to-workspace 2"]
 
 [[on-window-detected]]
 if.app-id = "com.apple.Safari"
-run = ["move-node-to-workspace web"]
+run = ["move-node-to-workspace 2"]
 
 [[on-window-detected]]
 if.app-id = "app.zen-browser.zen"
-run = ["move-node-to-workspace web"]
+run = ["move-node-to-workspace 2"]
 
 
-# Chat workspace apps
+# Workspace 9 apps (chat)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
-run = ["move-node-to-workspace chat"]
+run = ["move-node-to-workspace 9"]
 
 [[on-window-detected]]
 if.app-id = "com.hnc.Discord"
-run = ["move-node-to-workspace chat"]
+run = ["move-node-to-workspace 9"]
 
 
-# Work workspace apps
-# =============================================
-[[on-window-detected]]
-if.app-id = "com.microsoft.teams"
-run = ["move-node-to-workspace work"]
-
-
-# Others workspace apps
+# Workspace 4 apps (mail)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.apple.mail"
-run = ["move-node-to-workspace others"]
+run = ["move-node-to-workspace 4"]
 
 
-# Media workspace apps
+# Workspace 8 apps (media)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.apple.Music"
-run = ["move-node-to-workspace media"]
+run = ["move-node-to-workspace 8"]
 
 [[on-window-detected]]
 if.app-id = "com.spotify.client"
-run = ["move-node-to-workspace media"]
+run = ["move-node-to-workspace 8"]
 
 
-# Terminal workspace apps
+# Workspace 0 apps (terminal)
 # =============================================
 [[on-window-detected]]
 if.app-id = "com.apple.Terminal"
-run = ["move-node-to-workspace terminal"]
+run = ["move-node-to-workspace 0"]
 
 [[on-window-detected]]
 if.window-title-regex-substring = "Warp"
-run = ["move-node-to-workspace terminal"]
+run = ["move-node-to-workspace 0"]
 
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = ["move-node-to-workspace terminal"]
+run = ["move-node-to-workspace 0"]
 
-# Design workspace apps
+# Workspace 7 apps (design)
 # =============================================
 [[on-window-detected]]
 if.window-title-regex-substring = "Figma"
-run = ["move-node-to-workspace design"]
+run = ["move-node-to-workspace 7"]
 
 
 # MULTIPLE MONITORS
 # =============================================
 [workspace-to-monitor-force-assignment]
-terminal = ['main', 'secondary']
-work = ['secondary', 'main']
-chat = ['secondary', 'main']
-design = ['secondary', 'main']
-media = ['secondary', 'main']
+0 = ['main', 'secondary']
+9 = ['secondary', 'main']
+7 = ['secondary', 'main']
+8 = ['secondary', 'main']

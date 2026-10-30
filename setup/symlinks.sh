@@ -13,14 +13,17 @@ link() {
     return
   fi
 
-  ln -sf "$src" "$dest"
+  # -n prevents ln from dereferencing an existing directory-symlink at $dest
+  # and creating the new link *inside* it (which produced self-referential
+  # loops like aerospace/aerospace -> aerospace in earlier runs).
+  ln -sfn "$src" "$dest"
   echo -e "${GREEN}[link]${NC} $dest -> $src"
 }
 
 config_dirs=(
   aerospace
   sketchybar
-  yabai
+  borders
   zed
   ghostty
   nvim

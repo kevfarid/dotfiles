@@ -66,7 +66,7 @@
     "model_parameters": [],
   },
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Macchiato",
     "dark": "Symbols Icon Theme",
   },
@@ -76,8 +76,8 @@
   "buffer_font_family": "Iosevka",
   "theme": {
     "mode": "dark",
-    "light": "One Light",
-    "dark": "Tokyo Night",
+    "light": "Rosé Pine",
+    "dark": "Catppuccin Espresso (Blur) [Heavy]"
   },
   "diagnostics": {
     "inline": {

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# JankyBorders — neutral black (matches example/borders/bordersrc)
+options=(
+    style=round
+    width=2.0
+    hidpi=on
+    active_color=0xff000000
+    inactive_color=0xff000000
+    order=above
+)
+
+borders "${options[@]}"
