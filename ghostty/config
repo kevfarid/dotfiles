@@ -19,12 +19,22 @@ font-size = 14
 background-opacity = 0.95
 background-blur-radius = 20
 
-window-decoration = true
+macos-window-shadow = false
+macos-titlebar-style = hidden
 window-padding-color = extend
+window-padding-x = 10
+window-padding-y = 10
 window-step-resize = false
 window-padding-balance = true
 window-height = 100
 window-width = 100
+window-colorspace = "display-p3"
+
+cursor-style = block
+cursor-style-blink = false
+mouse-hide-while-typing = true
+shell-integration-features = no-cursor
+copy-on-select = clipboard
 
 gtk-tabs-location = hidden
 
@@ -78,32 +88,8 @@ keybind = alt+s=write_screen_file:paste
 
 
 # ┌──────────────────────────────────────────────────────────────────────────────┐
-# │                           GENTLEMAN THEME                                    │
+# │                           ROSE PINE THEME                                    │
 # └──────────────────────────────────────────────────────────────────────────────┘
 
-# --- Base Colors ---
-background = 06080f
-foreground = f3f6f9
-cursor-color = e0c15a
-selection-background = 263356
-selection-foreground = f3f6f9
-
-# --- Normal Colors ---
-palette = 0=#06080f
-palette = 1=#cb7c94
-palette = 2=#b7cc85
-palette = 3=#ffe066
-palette = 4=#7fb4ca
-palette = 5=#ff8dd7
-palette = 6=#7aa89f
-palette = 7=#f3f6f9
-
-# --- Bright Colors ---
-palette = 8=#8a8fa3
-palette = 9=#de8fa8
-palette = 10=#d1e8a9
-palette = 11=#fff7b1
-palette = 12=#a3d4d5
-palette = 13=#ffaeea
-palette = 14=#7fb4ca
-palette = 15=#f3f6f9
+theme = Rose Pine
+background = #0b0a10

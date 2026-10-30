@@ -4,3 +4,6 @@ node_modules
 lspServers/node_modules/
 vscode
 zed/prompts/
+nvim.log
+sketchybar/helpers/**/bin/
+example/

@@ -1,38 +1,35 @@
 # Dotfiles
 
-Minimal yet powerful dotfiles setup for macOS and Linux, tailored to supercharge your daily workflow.
+Minimal yet powerful dotfiles setup for macOS, tailored to supercharge your
+daily workflow.
 
-## 🛠 Tools
-These are the core tools managed by the dotfiles setup:
+## 🛠 Stack
 
-### ⚙️ Environment Management
-- [Homebrew](https://brew.sh/) – Package manager for macOS and Linux.
-- [FNM](https://github.com/Schniz/fnm) – Fast Node.js version manager.
-- [Jabba](https://github.com/shyiko/jabba) – Java version manager.
+### 🖥️ Window management
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace) – i3-like tiling window manager. Workspaces are numbered `1..9,0`.
+- [SketchyBar](https://github.com/FelixKratz/SketchyBar) – status bar, configured in Lua (SbarLua). Shows the focused AeroSpace workspace and the apps open in it.
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders) – colored border around the focused window.
 
 ### 🖥️ Shell & Terminal
-- [Zsh](https://www.zsh.org/) – Powerful and interactive shell.
-- [Starship](https://starship.rs/) – Minimal, blazing-fast, cross-shell prompt.
-- [Warp](https://warp.dev/) – Modern terminal for macOS with a UI and AI features.
+- [Ghostty](https://ghostty.org/) – GPU-accelerated terminal.
+- [tmux](https://github.com/tmux/tmux) – terminal multiplexer. Ghostty forwards its window-switching keys (`cmd+t`, `ctrl+tab`, `ctrl+shift+tab`) to tmux's prefix table.
+- [Fish](https://fishshell.com/) / [Zsh](https://www.zsh.org/) – shells.
+- [Starship](https://starship.rs/) – minimal, blazing-fast, cross-shell prompt.
 
-### 🧠 Productivity Tools
-- [Raycast](https://raycast.com/) – Spotlight alternative and productivity launcher for macOS.
-- [Aerospace](https://github.com/nikitabobko/AeroSpace) – Tiling window manager for macOS.
-
-### 💻 Code Editors
+### 💻 Editors
+- [Neovim](https://neovim.io/) ([LazyVim](https://www.lazyvim.org/)-based).
 - [Zed](https://zed.dev/)
-- [VSCode](https://code.visualstudio.com/)
-
-
-## Fonts
-My preferred fonts for coding and terminal use:
-
-- [Dank Mono](https://philpl.gumroad.com/l/dank-mono) - Code Editor Font
-- [Hack NerdFont](https://www.nerdfonts.com/) - Terminal Font
 
 ## Installation
-Run the following command to install the dotfiles:
 
 ```bash
-git clone https://github.com/kevfarid/dotfiles .dotfiles
+git clone https://github.com/kevfarid/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
 ```
+
+`install.sh` symlinks each tool's config directory into `~/.config/<tool>`
+(see `setup/symlinks.sh` for the full list) plus `starship.toml` and `.zshrc`.
+
+SketchyBar's Lua config additionally needs its own dependencies (Lua,
+SbarLua, fonts) — see `sketchybar/helpers/install.sh` before starting it.
