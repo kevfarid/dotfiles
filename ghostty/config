@@ -75,6 +75,12 @@ keybind = ctrl+shift+l=resize_split:right,10
 keybind = cmd+k=clear_screen
 keybind = shift+enter=text:\x1b\r
 
+# Clipboard: Cmd+V is made image-aware by Hammerspoon (hammerspoon/init.lua):
+# text -> normal paste, image -> Ctrl+V so Claude Code / Codex attach it.
+# Cmd+Shift+V is a fallback that always forwards Ctrl+V.
+keybind = cmd+v=paste_from_clipboard
+keybind = cmd+shift+v=text:\x16
+
 # Tmux window workflow (disable Ghostty tabs and forward to tmux prefix binds)
 keybind = cmd+t=unbind
 keybind = ctrl+tab=unbind
