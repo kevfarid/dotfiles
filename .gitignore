@@ -11,3 +11,6 @@ example/
 # fisher-managed plugin files (the list lives in fish/fish_plugins)
 fish/plugins/
 fish/fish_variables
+
+# tmux plugins (managed by tpm, see setup/tmux.sh)
+tmux/plugins/

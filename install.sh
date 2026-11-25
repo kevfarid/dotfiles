@@ -10,6 +10,7 @@ echo ""
 
 source "$SCRIPTS_DIR/symlinks.sh"
 source "$SCRIPTS_DIR/fish.sh"
+source "$SCRIPTS_DIR/tmux.sh"
 
 echo ""
 echo "Done."
