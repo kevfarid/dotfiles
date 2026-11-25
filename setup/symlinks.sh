@@ -34,6 +34,7 @@ config_dirs=(
 standalone=(
   "starship.toml:$CONFIG/starship.toml"
   ".zshrc:$HOME/.zshrc"
+  "hammerspoon:$HOME/.hammerspoon"
 )
 
 for dir in "${config_dirs[@]}"; do
