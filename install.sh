@@ -9,6 +9,7 @@ echo "Setting up dotfiles..."
 echo ""
 
 source "$SCRIPTS_DIR/symlinks.sh"
+source "$SCRIPTS_DIR/fish.sh"
 
 echo ""
 echo "Done."

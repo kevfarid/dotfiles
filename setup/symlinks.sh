@@ -27,7 +27,6 @@ config_dirs=(
   zed
   ghostty
   nvim
-  fish
   tmux
 )
 

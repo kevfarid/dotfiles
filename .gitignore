@@ -7,3 +7,7 @@ zed/prompts/
 nvim.log
 sketchybar/helpers/**/bin/
 example/
+
+# fisher-managed plugin files (the list lives in fish/fish_plugins)
+fish/plugins/
+fish/fish_variables
